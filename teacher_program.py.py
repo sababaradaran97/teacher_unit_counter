@@ -10,7 +10,7 @@ lesson_list = [ { "lesson_name" : "python" , "unit" : "3" , "teacher" : "ali" } 
 
 for i in range( lesson_list ) : 
 
-    if ["teacher"] in teacher_unit_info :
+    if lesson_list[ i ][ "teacher" ] in teacher_unit_info :
         teacher_unit_info[ i ][ "teacher_units" ] = teacher_unit_info[ i ][ "teacher_units" ] + lesson_list[ i ][ "unit" ]
 
     else :
@@ -19,4 +19,5 @@ for i in range( lesson_list ) :
 teacher_unit_info = sorted ( teacher_unit_info[ "teacher_name "] )
 
 for i in range( teacher_unit_info ) :
+
     print ( teacher_unit_info[ i ][ "teacher_name" ] , ":" , teacher_unit_info[ i ][ "teacher_units" ] )
